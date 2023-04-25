@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Django</title>
 </head>
+<header style="background-color: aqua;">
+    <div style="text-align: center;">
+        <ul style="list-style-type: none;padding-left: 0px">
+            <p>
+            {% for x in listmenu %}
+                <a href="#"><li style="display: inline-block;padding: 10px 20px;">{{x}}</li></a>
+            {% endfor %}
+            </p>
+        </ul>
+    </div>
+</header>
 <body>
-    <h1>{{ insert_me }}</h1>
+    <div style="text-align:  center;">
+        <h1>{{ title }}</h1>
+        <img src="{% static "images/clasics.png" %}" width="20%" alt="">
+    </div>
 </body>
 </html>
